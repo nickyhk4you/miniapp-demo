@@ -1,0 +1,10 @@
+<view class="main">
+    <view class="form-box">
+        <form bindsubmit="formSubmit">
+            <input value="{{address.name}}" name="name" placeholder="Name"/>
+            <input type="number" name="phone" value="{{address.phone}}" placeholder="Phone Number"/>
+            <input name="detail" value="{{address.detail}}" placeholder="Address"/>
+            <button form-type="submit">Submit</button>
+        </form>
+    </view>
+</view>

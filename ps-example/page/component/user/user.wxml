@@ -1,0 +1,24 @@
+<view class="main">
+    <view class="header">
+        <image src="/image/images.png" class="thumb"></image>
+        <text class="nickname">Root</text>
+    </view>
+    <view wx:if="{{orders.length > 0}}">
+    <view class="orders-box">
+        <view class="orders">My Orders</view>
+        <view class="orders-number"> Order Number：A4561245678641685</view>
+        <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+            <view class="orders-detail">
+                <image src="{{item.image}}"></image>
+                <view class="">{{item.name}}</view>
+                <view class="">{{item.count}}</view>
+                <text class="orders-status">{{item.status}}</text>
+            </view>    
+        </view>
+        <view class="orders-footer">
+                <text>Paid Amount：$ 1.00</text>
+                <button size="mini" class="orders-btn" bindtap="payOrders">Payment</button>
+        </view>
+    </view>
+    </view>
+</view>
